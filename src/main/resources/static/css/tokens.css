@@ -1,0 +1,152 @@
+/* ==========================================================================
+   TOKENS — single source of truth for the theme.
+   Change a value here and it propagates to every page and component.
+   Load order: tokens.css → components.css → pages.css
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    /* ---- Surfaces (deep, layered) ---- */
+    --bg-body: #090d17;
+    --bg-surface: #111827;      /* cards, panels */
+    --bg-elevated: #1a2334;     /* hover, raised */
+    --bg-input: #0d1420;
+    --bg-nav: rgba(11, 16, 26, 0.72);
+
+    /* ---- Borders ---- */
+    --border: rgba(148, 163, 184, 0.14);
+    --border-strong: rgba(148, 163, 184, 0.30);
+    --border-accent: rgba(34, 211, 238, 0.45);
+
+    /* ---- Text ---- */
+    --text-1: #f8fafc;
+    --text-2: #c3ccda;
+    --text-3: #8b97ab;
+
+    /* ---- Brand accent (cyan) + secondary (indigo, gradients only) ---- */
+    --accent: #22d3ee;
+    --accent-strong: #06b6d4;
+    --accent-soft: rgba(34, 211, 238, 0.12);
+    --accent-2: #818cf8;
+    --accent-grad: linear-gradient(135deg, #22d3ee 0%, #818cf8 100%);
+
+    /* ---- Semantic ---- */
+    --danger: #f87171;
+    --danger-strong: #ef4444;
+    --danger-soft: rgba(248, 113, 113, 0.12);
+    --success: #34d399;
+    --success-soft: rgba(52, 211, 153, 0.12);
+    --warning: #fbbf24;
+
+    /* ---- Geometry ---- */
+    --radius-sm: 10px;
+    --radius: 14px;
+    --radius-lg: 20px;
+
+    /* ---- Elevation (layered) ---- */
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.4);
+    --shadow-md: 0 4px 12px rgba(0,0,0,.35), 0 2px 4px rgba(0,0,0,.25);
+    --shadow-lg: 0 16px 40px rgba(0,0,0,.45), 0 4px 12px rgba(0,0,0,.3);
+    --glow-accent: 0 8px 30px rgba(34,211,238,.25);
+
+    /* ---- Type ---- */
+    --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --fs-xs: 0.78rem;
+    --fs-sm: 0.875rem;
+    --fs-md: 0.95rem;
+    --fs-lg: 1.1rem;
+    --fs-xl: 1.35rem;
+    --fs-2xl: 1.75rem;
+    --fs-3xl: 2.4rem;
+    --fs-4xl: 3.4rem;
+    --lh-tight: 1.15;
+    --lh-body: 1.6;
+
+    /* ---- Motion ---- */
+    --ease: cubic-bezier(.2, .7, .3, 1);
+    --speed: .18s;
+    --speed-slow: .32s;
+
+    /* ---- Layout ---- */
+    --container: 1180px;
+    --nav-h: 64px;
+}
+
+/* ==========================================================================
+   RESET + BASE
+   ========================================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Blink/WebKit bug: border-radius + overflow:hidden underfills curved edges.
+   Inset shadow matching surface bg fills gap along inner curve. */
+.card,
+.form-card,
+.detail-hero,
+.modal-wrap {
+    box-shadow: inset 0 0 0 999px var(--bg-surface);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font);
+    font-size: var(--fs-md);
+    line-height: var(--lh-body);
+    color: var(--text-2);
+    background-color: var(--bg-body);
+    background-image:
+        radial-gradient(900px 500px at 12% -8%, rgba(34,211,238,.10), transparent 60%),
+        radial-gradient(900px 600px at 105% 8%, rgba(129,140,248,.10), transparent 55%);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+    color: var(--text-1);
+    line-height: var(--lh-tight);
+    letter-spacing: -0.02em;
+    margin: 0 0 .5em;
+    font-weight: 700;
+}
+h1 { font-size: var(--fs-3xl); font-weight: 800; }
+h2 { font-size: var(--fs-xl); }
+h3 { font-size: var(--fs-lg); }
+
+p { margin: 0 0 1em; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-strong); }
+
+img { max-width: 100%; display: block; }
+
+code {
+    font-family: 'SFMono-Regular', ui-monospace, Menlo, Consolas, monospace;
+    font-size: .9em;
+    background: rgba(148,163,184,.1);
+    border-radius: 6px;
+    padding: .1em .4em;
+    color: var(--text-1);
+}
+
+::selection { background: rgba(34,211,238,.3); color: #fff; }
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Thin, themed scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(148,163,184,.22); border-radius: 999px; border: 2px solid transparent; background-clip: content-box; }
+::-webkit-scrollbar-thumb:hover { background: rgba(148,163,184,.35); background-clip: content-box; }
+
+/* Shared layout container */
+.container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 2rem 1.5rem 0; }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+    html { scroll-behavior: auto; }
+}

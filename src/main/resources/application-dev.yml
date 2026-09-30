@@ -1,0 +1,19 @@
+spring:
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java/
+    livereload:
+      enabled: true
+  # Serve static files straight from source dir (not the stale target/classes copy),
+  # so HTML/CSS/JS edits are visible on browser refresh without app restart.
+  # Relative to CWD = project root when run via mvn spring-boot:run.
+  web:
+    resources:
+      static-locations: "file:src/main/resources/static/"
+      cache:
+        cachecontrol:
+          no-cache: true
+
+server:
+  port: 8080

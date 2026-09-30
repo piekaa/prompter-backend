@@ -1,0 +1,7 @@
+.git
+.idea
+.playwright-mcp
+.cline
+target
+*.png
+scripts/.venv

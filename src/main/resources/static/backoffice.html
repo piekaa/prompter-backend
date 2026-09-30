@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backoffice — Prompter Backend</title>
+    <link rel="stylesheet" href="/css/tokens.css">
+    <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+
+<div class="nav">
+    <div class="nav-inner">
+        <a class="nav-brand" href="/backoffice"><span class="brand-mark">⚡</span> Prompter</a>
+        <div class="nav-links">
+            <a class="nav-link" href="/">Site</a>
+            <form action="/logout" method="post" style="display:contents">
+                <button type="submit" class="nav-link" style="background:none;border:none;cursor:pointer">Log out</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="toolbar">
+        <div>
+            <div class="toolbar-title">Backoffice</div>
+            <div class="toolbar-sub">Auth is working — you are logged in.</div>
+        </div>
+    </div>
+
+    <div class="card" style="max-width: 560px;">
+        <div class="card-body">
+            <h2 class="card-title">Ready to build</h2>
+            <p class="card-desc">
+                This shell has: form-login + session (this page requires auth),
+                Flyway-managed schema, a users table and a seeded <code>admin</code> account.
+                Build your domain pages and APIs here — see CLAUDE.md for the patterns.
+            </p>
+        </div>
+    </div>
+</div>
+
+<script src="/js/core.js"></script>
+<script>
+    Aff.toast('Logged in — session active', 'success');
+</script>
+
+</body>
+</html>
