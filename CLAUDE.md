@@ -54,6 +54,36 @@ docker compose down              # stop everything
 ./scripts/dev-stop.sh            # stop postgres, clean data
 ```
 
+## IntelliJ MCP
+
+IntelliJ IDEA exposes an MCP server (SSE at `http://localhost:64342/sse`, registered in Claude Code local config). Only available while the IDE is running.
+
+**Preference: use MCP tools instead of terminal commands for build/run/diagnostics.**
+- Run the app: `execute_run_configuration` (see below) — NOT `dev-start.sh` in terminal
+- Compile check: `build_project` (returns only errors/warnings, incremental)
+- File diagnostics: `get_file_problems` (IDE inspections)
+- **Exceptions — keep using terminal (`Bash`)**:
+  - `mvn test` — terminal gives exit codes, output can be redirected/grep'd; MCP would dump full surefire output into context and the IDE console cannot be tailed or filtered
+  - Anything needing log filtering, grep, or reliable exit codes
+
+**Mandatory params on every tool call:**
+- `projectPath: C:\Users\Piotr\IdeaProjects\prompter-backend` — IDE has multiple projects open; calls without it are rejected
+
+**Run the app (fire-and-forget):**
+```
+execute_run_configuration {
+  configurationName: "PrompterApp Dev",   # dev profile + DevTools hot reload
+  projectPath: ...,
+  timeout: 5000                            # ms — small value = return fast
+}
+```
+- The tool blocks until the config *exits*; a server app never exits, so **`timedOut: true` is the success signal**, not an error. App keeps running in the IDE.
+- Even the timed-out response carries captured stdout — boot failures (port clash, migration error) show up inline.
+- After calling, verify with `curl http://localhost:8080/actuator/health` (expect `{"status":"UP"}`).
+- Stop: kill the process listening on 8080, or user stops it in the IDE.
+
+**Other useful tools:** `get_run_configurations`, `get_file_text_by_path`, `search_in_files_by_regex` (indexed, fast — prefer over grep), `execute_terminal_command` (runs in the IDE's integrated terminal), `open_file_in_editor`, `rename_refactoring` (safer than text replace for symbols).
+
 ## Project Structure
 
 ```
