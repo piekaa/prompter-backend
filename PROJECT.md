@@ -2,9 +2,9 @@
 
 ## What it is
 
-**Prompter Backend** — a fresh Spring Boot backend with the full dev setup ready: hot-reload workflow, Docker stack, Spring Security form-login backoffice, static HTML/CSS/JS frontend with a shared theme + UI kit, and a TestContainers-based test suite.
+**Prompter Backend** — backend for a teleprompter Android app: write scripts in a web editor, fetch them from the app. Spring Boot with hot-reload workflow, Docker stack, Flyway-managed PostgreSQL, static HTML/CSS/JS frontend with a shared theme + UI kit, and a TestContainers-based test suite.
 
-No domain logic yet — this is the shell to build the prompter domain on.
+**Domain:** scripts (title + text content). The web editor at `/` lists and edits them; the public REST API under `/api/public/scripts` (list, get, create, update, delete — no auth, for the Android app).
 
 ## Tech Stack
 
@@ -24,7 +24,10 @@ No domain logic yet — this is the shell to build the prompter domain on.
 - `users` table (Flyway `V1__init.sql`) + `User` entity + `UserDetailsServiceImpl`
 - Static shell: `index.html` (public), `login.html`, `backoffice.html` (auth-gated)
 - Theme: `css/tokens.css` (design tokens) + `css/components.css` (UI kit) + `js/core.js` (utils: fetchJSON, toast, confirm, modals, form errors)
-- `IntegrationTestBase` — TestContainers PostgreSQL + Flyway for all integration tests
+- `IntegrationTestBase` — TestContainers PostgreSQL + Flyway for all integration tests (JVM-level shared container — survives across test classes in one fork)
+- `Script` entity + `ScriptService` + `ScriptController` (`/api/public/scripts`, full CRUD) + `V2__scripts.sql`
+- `ApiExceptionHandler` — JSON error contract `{"error": "..."}` (404/400), read by `js/core.js`
+- `index.html` — scripts app: list panel + clean textarea editor (Ctrl/Cmd+S save, word count, dirty tracking, delete confirm)
 
 ## Conventions
 

@@ -1,0 +1,78 @@
+data: /message?sessionId=fb767d71-f0a3-402a-8e58-75b3459ab946
+event: endpoint
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"id":1,"result":{"protocolVersion":"2024-11-05","capabilities":{"tools":{"listChanged":true}},"serverInfo":{"name":"IntelliJ IDEA MCP Server","version":"2025.3.2"}},"jsonrpc":"2.0"}
+event: message
+
+data: {"id":2,"result":{"content":[{"text":"{\"configurations\":[{\"name\":\"PrompterApp\",\"description\":\"Spring Boot Application\"},{\"name\":\"PrompterApp Dev\",\"description\":\"Spring Boot Application\"}]}","type":"text"}],"isError":false,"structuredContent":{"configurations":[{"name":"PrompterApp","description":"Spring Boot Application"},{"name":"PrompterApp Dev","description":"Spring Boot Application"}]}},"jsonrpc":"2.0"}
+event: message
+

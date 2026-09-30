@@ -1,0 +1,78 @@
+data: /message?sessionId=65dd2091-bae1-4a0f-aaa0-9ad039bab481
+event: endpoint
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"id":1,"result":{"protocolVersion":"2024-11-05","capabilities":{"tools":{"listChanged":true}},"serverInfo":{"name":"IntelliJ IDEA MCP Server","version":"2025.3.2"}},"jsonrpc":"2.0"}
+event: message
+
+data: {"id":2,"result":{"content":[{"text":"No exact project is specified while multiple projects are opened.\n You may specify the project path via `projectPath` parameter when calling a tool. \n If you're aware of the current working directory you may pass it as `projectPath`. \n In the case when it's unobvious which project to use you have to ASK the USER about a project providing him a numbered list of the projects.\n Currently open projects: {\"projects\":[{\"path\":\"C:/Users/Piotr/IdeaProjects/affiliate\"},{\"path\":\"C:/Users/Piotr/IdeaProjects/prompter-backend\"}]}","type":"text"}],"isError":true,"structuredContent":{"projects":[{"path":"C:/Users/Piotr/IdeaProjects/affiliate"},{"path":"C:/Users/Piotr/IdeaProjects/prompter-backend"}]}},"jsonrpc":"2.0"}
+event: message
+

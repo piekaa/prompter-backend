@@ -3,24 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prompter Backend</title>
+    <title>Prompter — Scripts</title>
     <link rel="stylesheet" href="/css/tokens.css">
     <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/pages.css">
 </head>
 <body>
 
-<div class="container" style="text-align:center; padding-top: 6rem;">
-    <div class="empty-icon" style="margin: 0 auto 1.5rem;">⚡</div>
-    <h1>Prompter Backend</h1>
-    <p style="max-width: 460px; margin: 0 auto 2rem;">
-        Project setup is ready: Spring Boot, PostgreSQL (Flyway), Spring Security
-        form-login, static frontend with hot reload, TestContainers test base.
-        Add your pages, APIs and domain model on top of this shell.
-    </p>
-    <a class="btn btn-primary" href="/login">Open backoffice →</a>
+<nav class="nav">
+    <div class="nav-inner">
+        <a class="nav-brand" href="/">
+            <span class="brand-mark">⚡</span>
+            Prompter
+        </a>
+        <div class="nav-links">
+            <button class="btn btn-primary btn-sm" data-new>＋ New script</button>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="app">
+
+        <!-- Scripts list -->
+        <aside class="list-panel">
+            <div class="list-head">
+                <h2>Scripts</h2>
+                <span class="badge badge-count" id="script-count">0</span>
+            </div>
+            <ul class="list" id="script-list"></ul>
+            <div class="list-empty" id="list-empty">
+                No scripts yet.<br>
+                Hit “New script” to write your first one.
+            </div>
+        </aside>
+
+        <!-- Editor -->
+        <main class="editor-panel">
+            <div class="editor-head">
+                <div class="editor-title-wrap">
+                    <input class="editor-title" id="script-title" type="text"
+                           placeholder="Script title…" maxlength="255" autocomplete="off" spellcheck="false">
+                </div>
+            </div>
+
+            <div class="editor-body">
+                <textarea class="editor-textarea" id="script-content"
+                          placeholder="Start typing your script…" spellcheck="false"></textarea>
+            </div>
+
+            <div class="editor-foot">
+                <div class="editor-stats">
+                    <span id="editor-stats">0 words · 0 chars</span>
+                    <span class="save-state" id="save-state"><span class="dot"></span><span>New script</span></span>
+                </div>
+                <div class="editor-actions">
+                    <button class="btn btn-ghost" id="btn-delete" title="Delete current script">🗑 Delete</button>
+                    <button class="btn btn-primary" id="btn-save">Save <span style="opacity:.55;font-size:.85em">⌘S</span></button>
+                </div>
+            </div>
+        </main>
+
+    </div>
 </div>
 
 <script src="/js/core.js"></script>
+<script src="/js/scripts.js"></script>
 
 </body>
 </html>

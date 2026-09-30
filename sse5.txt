@@ -1,0 +1,75 @@
+data: /message?sessionId=af5ab103-7784-4221-91f6-7b90fc9fe411
+event: endpoint
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"method":"notifications/tools/list_changed","jsonrpc":"2.0"}
+event: message
+
+data: {"id":1,"result":{"protocolVersion":"2024-11-05","capabilities":{"tools":{"listChanged":true}},"serverInfo":{"name":"IntelliJ IDEA MCP Server","version":"2025.3.2"}},"jsonrpc":"2.0"}
+event: message
+
